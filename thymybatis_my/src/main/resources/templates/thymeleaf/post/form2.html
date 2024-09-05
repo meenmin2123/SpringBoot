@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>form.html</title>
+</head>
+<body>
+<h1>Form 태그 타임리프로 변경하기</h1>
+<form action="#" th:action="@{/view2}" method="post" th:object="${BookDTO}">
+
+<!--    <label>책 제목</label>-->
+<!--    <input type="text" th:field="*{title}">-->
+
+<!--    <label>저자</label>-->
+<!--    <input type="text" th:field="*{author}">-->
+
+<!--    <label>출판사</label>-->
+<!--    <input type="text" th:field="*{publisher}">-->
+
+<!--    <label>출판일</label>-->
+<!--    <input type="text" th:field="*{publisherDate}">-->
+
+    <input type="submit" value="전송">
+    <input type="reset" value="초기화">
+</form>
+</body>
+</html>
+
+<!--
+     * th:object : Form 데이터를 서버의 객체와 연결하는 역할
+       - Form의 입력 필드에서 서버에 전달 된 객체 사용자가 입력한 데이터를
+         바로 객체에 저장할 수 있도록 사용하는 것
+       - 실행순서
+         1. 객체 생성 및 전달 : spring controller에서 dto 객체를 생성하고 모델에 추가함.
+                                그 후에 타임리프 th:object 속성에 dto 객체 전달됨.
+         2. 전달 받은 객체가 어떤 input 타입과 매핑해서 데이터를 저장할 지 작성
+-->
