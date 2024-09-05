@@ -1,0 +1,21 @@
+package com.ss.article.controller;
+
+import org.springframework.stereotype.Controller;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PostMapping;
+
+@Controller
+public class UsersController {
+	
+	@GetMapping("/articles/user")
+	public String userPage() {
+		
+		return "userPage";
+	}
+	
+	@PostMapping("/articles/userCreate")
+	public String userCreate() {
+		
+	}
+
+}

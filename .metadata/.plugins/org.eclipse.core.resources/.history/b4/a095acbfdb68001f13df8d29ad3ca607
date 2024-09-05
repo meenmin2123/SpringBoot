@@ -1,0 +1,7 @@
+<!-- header 적용 -->
+{{>./layout/header}}
+
+
+
+<!-- footer적용 -->
+{{>./layout/footer}}

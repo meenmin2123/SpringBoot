@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<!-- 풀 패키지 명을 namespace 작성함. mapper 인터페이스에서 함수 호출 시 매핑해서 sql 실행 -->
+<mapper namespace="com.ss.mybatis.mapper.ArticleMapper">
+
+    <select id = "findArticles" resultType="Article">
+        SELECT * FROM article
+    </select>
+
+    <insert id="insertArticles" parameterType="Article">
+        INSERT INTO article (title, content) VALUES (#{title}, #{content})
+    </insert>
+
+    <select id="selectDetail" parameterType="int" resultType="Article">
+        SELECT * FROM article
+        WHERE ID = #{id}
+    </select>
+
+    <update id="updateArticles" parameterType="Article">
+        UPDATE article
+        SET TITLE = #{title}, CONTENT = #{content}
+        WHERE ID = #{id}
+    </update>
+
+
+
+</mapper>
+

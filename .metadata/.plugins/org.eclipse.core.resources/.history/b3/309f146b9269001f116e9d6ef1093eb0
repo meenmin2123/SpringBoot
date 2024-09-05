@@ -1,0 +1,14 @@
+spring.application.name=article
+server.port=9090
+server.servlet.encoding.force=true
+spring.h2.console.enabled=true
+
+#jpa
+# SQL QUERY
+spring.jpa.show-sql=true
+
+# sql formating
+spring.jpa.properties.hibernate.format_sql=true
+
+spring.jpa.defer-datasource-initialization=true
+

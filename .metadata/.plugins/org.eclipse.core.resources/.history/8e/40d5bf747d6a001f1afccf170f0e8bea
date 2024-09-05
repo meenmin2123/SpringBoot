@@ -1,0 +1,48 @@
+package com.ss.restful.controller;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Controller;
+import org.springframework.ui.Model;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PostMapping;
+
+import com.ss.restful.dto.MemberDTO;
+import com.ss.restful.entity.Member;
+import com.ss.restful.repository.MemberRepository;
+import com.ss.restful.service.MemberService;
+
+import lombok.extern.slf4j.Slf4j;
+
+@Controller
+@Slf4j
+public class MemberController {
+	
+	@Autowired
+	private MemberService service;
+	
+	@Autowired
+	private MemberRepository re;
+	
+	@PostMapping("/member/create")
+	public String create(Model model, MemberDTO mem) {
+		
+		Member res = service.create(mem);
+		System.out.println("res : " + res);
+		
+		if(res != null) {
+			model.addAttribute("msg","가입 성공!");
+			System.out.println("가입 성공!");
+		} else {
+			model.addAttribute("msg","가입 실패");
+		}
+		
+		return "redirect:/memberlist";
+	}
+	
+	@GetMapping("/searchId.do")
+	public String searchId(Model model) {
+		
+		return "main";
+	}
+
+}

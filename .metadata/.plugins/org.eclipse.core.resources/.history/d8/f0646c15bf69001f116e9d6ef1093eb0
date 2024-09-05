@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Hi page</title>
+<!-- 제이쿼리 라이브러리 추가 -->
+<script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+
+<script src="js/index.js"></script>
+</head>
+<body>
+	<h1>RestController 값</h1>
+	
+	<div id="list">
+		<!-- ajax로 데이터 불러와서 여기에 표시함. -->
+	</div>
+	
+	<script>
+	
+		$(document).ready(function(){
+			// 페이지가 로드될때
+
+			$.ajax({
+				url:"/rest/articles",
+				method: "GET",
+				success: function(data) {
+					console.log(data);
+					
+					var articleHtml='';
+					data.forEach(function(article){
+						articleHtml += '<div>';
+						articleHtml += '<h3>a.title</h3>';
+						articleHtml += '<p>a.content</p>';
+						articleHtml += '</div>';
+					});
+					
+					$('#list').html(articleHtml)
+					
+				}, 
+				error: function(error) {
+					$('#list').html('에러 났다 확인 바람!');
+				}
+				
+			});		
+		});
+	</script>
+	
+	
+<script>
+</body>
+</html>

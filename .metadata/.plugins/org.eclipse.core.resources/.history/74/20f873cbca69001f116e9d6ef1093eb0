@@ -1,0 +1,23 @@
+package com.ss.restful.controller;
+
+import org.springframework.ui.Model;
+import org.springframework.web.bind.annotation.PostMapping;
+
+import com.ss.restful.service.MemberService;
+
+public class MemberController {
+	
+	private MemberService service;
+	
+	@PostMapping("/member/create")
+	public String create(Model model) {
+		
+		int res = service.create();
+		if(res > 0) {
+			model.addAttribute("msg","가입 성공!");
+		}
+		
+		return "redirect:/memberlist";
+	}
+
+}

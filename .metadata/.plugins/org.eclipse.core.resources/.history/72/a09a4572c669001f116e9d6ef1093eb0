@@ -1,0 +1,13 @@
+@charset "UTF-8";
+
+body{
+	background-color: #ffffe0;
+}
+
+#container{
+	margin:30px;
+}
+
+#devFrm control{
+	margin:10px;
+}

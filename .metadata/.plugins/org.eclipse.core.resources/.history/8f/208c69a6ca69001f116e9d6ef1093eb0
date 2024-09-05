@@ -1,0 +1,19 @@
+package com.ss.restful.controller;
+
+import org.springframework.web.bind.annotation.PostMapping;
+
+import com.ss.restful.service.MemberService;
+
+public class MemberController {
+	
+	private MemberService service;
+	
+	@PostMapping("/member/create")
+	public String create() {
+		
+		int res = service.create();
+		
+		return "redirect:/memberlist";
+	}
+
+}

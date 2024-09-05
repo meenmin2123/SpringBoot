@@ -1,0 +1,33 @@
+{{>./layout/header}}
+
+
+<table class="table">
+    <thead>
+    <tr>
+        <th scope="col">ID</th>
+        <th scope="col">Title</th>
+        <th scope="col">Content</th>
+    </tr>
+    </thead>
+    <tbody>
+    {{#list}}
+        <tr>
+            <td>{{id}}</td>
+            <!-- 넘어온 객체의 멤버에 접근한다. -->
+            <td>{{title}}</td>
+            <td>{{content}}</td>
+        </tr>
+
+    <!-- article 끝 -->
+    </tbody>
+</table>
+        <!-- 목록으로 돌아가기 -->
+        <a href="/index.do" class="btn btn-success">목록으로</a>
+
+        <!-- 수정하기 -->
+        <a href="/article/{{id}}/update" class="btn btn-primary">수정하기</a>
+
+        <!-- 삭제하기 -->
+        <a href="/article/{{id}}/delete" class="btn btn-danger">삭제하기</a>
+    {{/list}}
+{{>./layout/footer}}

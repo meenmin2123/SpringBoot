@@ -1,0 +1,24 @@
+@charset "UTF-8";
+
+body{
+	background-color: #ffffe0;
+}
+
+#container{
+	margin:30px;
+}
+
+#devFrm .form-control{
+	margin:10px;
+}
+
+.form-check {
+	margin:10px;
+}
+
+.list-group-item-action{
+	margin-top: 10px;
+	background: #198754;
+	color:white;
+	font-weight: bold;
+}

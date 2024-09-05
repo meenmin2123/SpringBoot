@@ -1,0 +1,5 @@
+package com.ss.restful.dto;
+
+public class ArticleDTO {
+
+}

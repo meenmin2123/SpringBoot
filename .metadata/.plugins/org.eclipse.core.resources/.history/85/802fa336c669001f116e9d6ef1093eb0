@@ -1,0 +1,13 @@
+{{>./layout/header}}
+
+<section id = "container">
+
+	<h2>회원가입</h2>
+
+
+
+</section>
+
+
+
+{{>./layout/footer}}

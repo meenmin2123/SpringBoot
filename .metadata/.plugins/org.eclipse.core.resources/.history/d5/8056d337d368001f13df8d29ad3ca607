@@ -1,0 +1,20 @@
+package com.ss.day1project.controlleer;
+
+import org.springframework.ui.Model;
+import org.springframework.web.bind.annotation.GetMapping;
+
+@Controller
+public class Controller {
+	// 브라우저에서 url "hi라는 요청이 들어옴
+	
+	@GetMapping("hi")
+	public String hi(Model model) {
+		//Model 인터페이스 객체에 addAttriubute
+		
+		model.addAttribute("username", "강만두");
+		
+		// 뷰 페이지 이름
+		return "hi";
+	}
+
+}

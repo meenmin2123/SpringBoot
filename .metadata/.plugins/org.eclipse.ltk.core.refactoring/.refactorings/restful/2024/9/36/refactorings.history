@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Rename resource &apos;restful/src/main/resources/templates/member/member.mustache&apos; to &apos;main.mustache&apos;" description="Rename resource &apos;member.mustache&apos;" flags="7" id="org.eclipse.ltk.core.refactoring.rename.resource" input="src/main/resources/templates/member/member.mustache" name="main.mustache" stamp="1725348251330" updateReferences="true"/>
+</session>

@@ -1,0 +1,12 @@
+package com.ss.restful.service;
+
+import org.springframework.beans.factory.annotation.Autowired;
+
+import com.ss.restful.repository.ArticleRepository;
+
+class ArticleService {
+	
+	@Autowired
+	private ArticleRepository repository;
+	
+}

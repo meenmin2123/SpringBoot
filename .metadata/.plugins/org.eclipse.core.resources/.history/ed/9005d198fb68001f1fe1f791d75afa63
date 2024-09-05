@@ -1,0 +1,4 @@
+spring.application.name=article
+server.port=9090
+server.servlet.encoding.force=true
+spring.h2.console.enabled=true

@@ -1,0 +1,5 @@
+package com.ss.restful.service;
+
+public class MemberService {
+
+}

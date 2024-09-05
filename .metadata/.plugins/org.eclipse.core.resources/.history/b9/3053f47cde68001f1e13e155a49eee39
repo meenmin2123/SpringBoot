@@ -1,0 +1,18 @@
+<!-- header 적용 -->
+{{>./layout/header}}
+
+<ul>
+
+	<!-- 반복 시작 -->
+	{{#each users}}
+	
+		<!-- 현재 반복 중인 리스트에서 값을 가져옴. -->
+		<li>ID: {{.id}}, Email: {{.email}}</li>
+		
+	<!-- 반복 끝 -->
+	{{/each}}
+
+</ul>
+
+<!-- footer적용 -->
+{{>./layout/footer}}

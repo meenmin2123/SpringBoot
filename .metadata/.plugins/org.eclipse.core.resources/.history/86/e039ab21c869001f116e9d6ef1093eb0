@@ -1,0 +1,20 @@
+package com.ss.restful.dto;
+
+import java.sql.Timestamp;
+
+public class MemberDTO {
+
+	private int NO;
+	private String ID;
+	private String PASSWORD;
+	private String ROLE;
+	private String NAME;
+	private String PHONE;
+	private String EMAIL;
+	private String ADDRESS;
+	private String HOBBY;
+	private String STATUS;
+	private Timestamp ENROLL_DATE;
+	private Timestamp MODIFY_DATE;
+
+}

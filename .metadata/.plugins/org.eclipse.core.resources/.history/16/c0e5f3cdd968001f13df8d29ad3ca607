@@ -1,0 +1,13 @@
+<!-- header 적용 -->
+{{>./layout/header}}
+
+<ul>
+
+	{{items}}
+
+
+
+</ul>
+
+<!-- footer적용 -->
+{{>./layout/footer}}

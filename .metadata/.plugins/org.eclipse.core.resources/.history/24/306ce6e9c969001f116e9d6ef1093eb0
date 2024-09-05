@@ -1,0 +1,13 @@
+package com.ss.restful.controller;
+
+import org.springframework.web.bind.annotation.PostMapping;
+
+public class MemberController {
+	
+	@PostMapping("/member/create")
+	public String create() {
+		
+		return "";
+	}
+
+}

@@ -1,0 +1,15 @@
+<!-- header 적용 -->
+{{>./layout/header}}
+
+<ul>
+
+	<!-- 반복 시작 -->
+	{{#items}}
+
+	<!-- 반복 끝 -->
+	{{/items}}
+
+</ul>
+
+<!-- footer적용 -->
+{{>./layout/footer}}

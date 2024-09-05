@@ -1,0 +1,41 @@
+{{>./layout/header}}
+
+<body>
+	<h1 style="text-align:center;">RestController 값</h1>
+<div class="container">
+	
+	<div id="list">
+		<!-- ajax로 데이터 불러와서 여기에 표시함. -->
+	</div>
+</div>
+	
+	<script type="text/javascript">
+	
+		$(document).ready(function(){
+			// 페이지가 로드될때
+
+			$.ajax({
+				url:"/rest/articles",
+				method: "GET",
+				success: function(data) {
+					console.log(data);
+					
+					var articleHtml='';
+					data.forEach(function(a){
+						articleHtml += '<div>';
+						articleHtml += '<h3>'+a.title+'</h3>';
+						articleHtml += '<p>'+a.content+'</p>';
+						articleHtml += '</div>';
+					});
+					
+					$('#list').html(articleHtml)
+					
+				}, 
+				error: function(error) {
+					$('#list').html('에러 났다 확인 바람!');
+				}
+			});		
+		});
+	</script>
+	
+{{>./layout/footer}}

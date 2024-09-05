@@ -1,0 +1,8 @@
+package com.ss.article.dto;
+
+
+public class articleDTO {
+	
+	private String title;
+	private String content;
+}

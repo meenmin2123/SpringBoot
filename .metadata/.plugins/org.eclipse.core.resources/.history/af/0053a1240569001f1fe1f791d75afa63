@@ -1,0 +1,29 @@
+package com.ss.article.controller;
+
+import org.springframework.stereotype.Controller;
+import org.springframework.ui.Model;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PostMapping;
+
+import com.ss.article.dto.userDTO;
+
+@Controller
+public class UsersController {
+	
+	@GetMapping("/users/userPage")
+	public String userPage() {
+		
+		return "userPage";
+	}
+	
+	@PostMapping("/users/create")
+	public String userCreate(Model model, userDTO dto) {
+		
+		log.info(" 정보를 출력하는 로그");
+		log.info(dto.toString());
+		System.out.println(dto);
+		
+		return "userPage";
+	}
+
+}

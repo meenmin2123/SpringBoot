@@ -1,0 +1,6 @@
+package com.ss.day1project.controlleer;
+
+@Controller
+public class Controller {
+
+}

@@ -1,0 +1,5 @@
+package com.ss.article.dto;
+
+public class articleDTO {
+
+}

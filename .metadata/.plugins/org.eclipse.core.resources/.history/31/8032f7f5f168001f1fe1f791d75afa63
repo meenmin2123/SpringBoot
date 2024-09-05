@@ -1,0 +1,46 @@
+package com.ss.article.dto;
+
+import lombok.AllArgsConstructor;
+import lombok.Data;
+import lombok.NoArgsConstructor;
+
+@Data
+@AllArgsConstructor
+@NoArgsConstructor
+public class articleDTO {
+	
+	private String title;
+	private String content;
+	
+	public articleDTO() {
+		super();
+	}
+	
+	public articleDTO(String title, String content) {
+		super();
+		this.title = title;
+		this.content = content;
+	}
+
+	public String getTitle() {
+		return title;
+	}
+
+	public void setTitle(String title) {
+		this.title = title;
+	}
+
+	public String getContent() {
+		return content;
+	}
+
+	public void setContent(String content) {
+		this.content = content;
+	}
+
+	@Override
+	public String toString() {
+		return "articleDTO [title=" + title + ", content=" + content + "]";
+	}
+	
+}

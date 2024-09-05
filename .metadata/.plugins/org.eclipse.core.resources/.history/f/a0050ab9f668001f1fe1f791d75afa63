@@ -1,0 +1,11 @@
+package com.ss.article.repository;
+
+import org.springframework.data.jpa.repository.JpaRepository;
+
+import com.ss.article.entity.Article;
+
+// spring boot의 JPA에서 entity의 기본적인 CRUD가 가능하도록 repository 제공함.
+// JPA
+public interface ArticleRepository extends JpaRepository<Article, Long> {
+
+}

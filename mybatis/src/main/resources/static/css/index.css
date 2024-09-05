@@ -1,0 +1,22 @@
+/* index */
+.pageTitle{
+    text-align: center;
+}
+
+.btnBox {
+    display: inline-block;
+}
+
+.table {
+    width: 100%;
+    text-align: center;
+}
+
+.detail_link {
+    text-decoration: black;
+}
+
+/* write */
+.mb-3 .form-control {
+    width: 80%  !important;
+}

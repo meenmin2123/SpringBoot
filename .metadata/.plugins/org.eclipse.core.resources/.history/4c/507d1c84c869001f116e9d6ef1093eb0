@@ -1,0 +1,5 @@
+package com.ss.restful.repository;
+
+public interface MemberRepository {
+
+}

@@ -1,0 +1,5 @@
+package com.ss.article.entity;
+
+public class Article {
+
+}

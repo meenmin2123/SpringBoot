@@ -1,0 +1,30 @@
+package com.ss.restful.repository;
+
+import java.util.List;
+
+import org.springframework.data.jpa.repository.JpaRepository;
+
+import com.ss.restful.entity.Member;
+
+public interface MemberRepository extends JpaRepository<Member, Integer>{
+	
+	// 1. 아이디로 회원 조회
+	public Member findById(Long id);
+	
+	// 2. 이메일로 회원 조회
+	public Member findByEmail(String email);
+	
+	// 3. 이름으로 회원 조회 
+	public List<Member> findByName(String name);
+	
+	// 4. 성별로 회원 조회
+	public List<Member> findByGender(String gender);
+	
+	// 5. 특정 취미가 있는 회원 조회
+	public List<Member> findByHobbiesContaining(String hobby);
+	
+	// 6. 나이로 회원 조회(25세 이상) 모든 나이를 조회 
+	public List<Member> findByAgeGreaterThanEqual(int age);
+
+	
+}
