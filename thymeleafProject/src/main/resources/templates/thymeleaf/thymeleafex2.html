@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>파일명:thymeleafEx2.html </title>
+</head>
+<body>
+    <h1>thymeleafEx2</h1>
+
+    <p th:text="(${num1 + num2})"></p>
+    <p th:text="'이름: '+${person.name}"></p>
+    <p th:text="'나이: '+${person.age}"></p>
+    <!-- person.getName() -->
+    <hr>
+
+    <h3>List</h3>
+    <ul>
+        <li th:text="${list[0]}"></li>
+        <li th:text="${list[1]}"></li>
+        <li th:text="${list[2]}"></li>
+    </ul>
+    <hr>
+
+    <h3>Map</h3>
+    <ul>
+        <li th:text="${scoremap['만두']}"></li>
+        <li th:text="${scoremap['파인애플']}"></li>
+        <li th:text="${scoremap['샤인머스켓']}"></li>
+        <li th:text="${scoremap['사과']}"></li>
+        <li th:text="${scoremap['딸기']}"></li>
+        <li th:text="${scoremap['수박']}"></li>
+    </ul>
+    <hr>
+
+    <h3>Map in List</h3>
+    <ul>
+        <li th:text="${listmap[0]['만두']}"></li>
+        <li th:text="${listmap[0]['파인애플']}"></li>
+        <li th:text="${listmap[0]['샤인머스켓']}"></li>
+        <li th:text="${listmap[0]['사과']}"></li>
+        <li th:text="${listmap[0]['딸기']}"></li>
+        <li th:text="${listmap[0]['수박']}"></li>
+    </ul>
+
+    <ul>
+        <li th:each="scoreItem : ${listmap}" th:object="${scoreItem}">
+            <ul>
+                <li th:each="entry : ${scoreItem}" th:text="${entry.key} + ': ' + ${entry.value}"></li>
+            </ul>
+        </li>
+    </ul>
+
+
+</body>
+</html>

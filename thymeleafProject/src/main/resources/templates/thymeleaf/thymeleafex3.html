@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>파일명:thymeleafEx3.html </title>
+</head>
+<body>
+<h1>thymeleafEx3</h1>
+<h2>조건문</h2>
+<!--
+    * 조건문
+    - th.if if문 조건이 참일 떄 요소가 랜더링됨.
+    - th:unless 조건이 거짓일 때 요소가 랜더링됨.
+    - th:switch 여러 조건 중 하나를 선택해서 랜더링함.
+    - th:case 모두 case는 switch문 안에 작성
+ -->
+    <p th:if="${isAdmin}">true</p>
+    <p th:unless="${isAdmin}">false</p>
+
+    <p th:if="${age >= 20}">성인</p>
+    <p th:if="${age < 20}">청소년</p>
+    <p th:unless="${age < 20}">조건없이</p>
+
+    <p th:if="${role == 'user'}">user</p>
+    <p th:if="${role == 'admin'}">admin</p>
+    <!-- fasle 일 때 실행됨
+         if문 unless 각각 따로 작성해서 사용해도 됨.
+     -->
+    <p th:unless="${role == 'user'}">not user</p>
+
+</br>
+    <h3>객체</h3>
+    <div th:if="${person != null}">
+        사용자 이름 : <span th:text="${person.name}"></span>
+    </div>
+    <div th:unless="${person2 != null}">
+        사용자 정보가 없습니다.
+    </div>
+</br>
+    <h3>switch</h3>
+    <div th:switch="${role}">
+        <p th:case="'admin'">admin</p>
+        <p th:case="'user'">user</p>
+        <p th:case="*">알수 없는 공간인데??</p>
+    </div>
+
+    <div th:switch="${role2}">
+        <p th:case="'admin'">admin</p>
+        <p th:case="'user'">user</p>
+        <p th:case="*">알수 없는 공간인데? 이게 보여?</p>
+    </div>
+
+</body>
+</html>
