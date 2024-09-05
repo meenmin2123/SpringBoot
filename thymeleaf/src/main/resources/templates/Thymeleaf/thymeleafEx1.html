@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html  xmlns:th="http://www.thymeleaf.org" >
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>thymeleafEx1</title>
+</head>
+<body>
+<main>
+    <section>
+        <h2>thymeleafEx1</h2>
+        <p>타임리프 사용 방법!</p>
+        <!-- 타임리프 핵심
+            - th : xxx가 붙은 부분은 서버사이드에서 랜더링되고 기존 것을 대체함
+                   xxx가 붙지 않으면 기존 HTML의 요소에 속성값으로 사용됨.
+                   html을 파일로 직접 열었을 떄 th:xxx가 있어도
+                   웹 브라우저는 th:속성을 알지 못하여 무시함.
+         -->
+        <h3>텍스트 문법</h3>
+        <p>1. 태그 안에 속성값으로 변수값을 저장할 때</p>
+        <p th:text="${username}">User Name</p>
+        <br/>
+    </section>
+</main>
+
+</body>
+</html>
