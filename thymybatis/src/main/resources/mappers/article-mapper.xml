@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.ss.thymybatis.mapper.ArticleMapper">
+    <select id="findAll" resultType="Article">
+        SELECT * FROM article
+    </select>
+
+    <select id="findListById" resultType="Article" parameterType="java.lang.Long">
+        SELECT * FROM article
+        WHERE ID = #{id}
+    </select>
+
+    <update id="update" parameterType="Article">
+        UPDATE article
+        SET TITLE = #{title}, CONTENT = #{content}
+        WHERE ID = #{id}
+    </update>
+
+    <insert id="insert" useGeneratedKeys="true" keyProperty="id">
+        INSERT INTO article(title, content) values (#{title}, #{content})
+    </insert>
+
+    <insert id="insertComment" parameterType="Comment">
+        INSERT INTO comments(nickname,body,articleId)
+        VALUES (#{nickname},#{body},#{articleId})
+    </insert>
+
+    <select id="commetList" parameterType="int" resultType="Comment">
+        select * from comments
+        where articleId = #{articleId}
+    </select>
+
+    <update id="commentUpdate" parameterType="Comment">
+        UPDATE COMMENTS
+        SET NICKNAME = #{nickname}, BODY = #{body}
+        WHERE ARTICLEID = #{articleId}
+    </update>
+
+</mapper>
