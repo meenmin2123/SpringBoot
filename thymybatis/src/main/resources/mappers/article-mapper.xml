@@ -34,7 +34,24 @@
     <update id="commentUpdate" parameterType="Comment">
         UPDATE COMMENTS
         SET NICKNAME = #{nickname}, BODY = #{body}
-        WHERE ARTICLEID = #{articleId}
+        WHERE ID = #{id}
     </update>
+
+    <!-- 댓글 한 건 조회 -->
+    <select id="commentUpdateNew" parameterType="Comment">
+        SELECT * FROM comments
+        WHERE ID = #{id}
+    </select>
+
+    <!-- 댓글 검색! 키워드, 댓글을 작성하는 아이디 댓글에 제목 -->
+    <select id="commentSearch" parameterType="Comment">
+        SELECT * FROM comments WHERE ID = #{id} AND ARTICLEID = #{articleId}
+    </select>
+
+
+    <delete id="commentDelete" parameterType="int">
+        DELETE FROM comments
+               WHERE ID = #{id}
+    </delete>
 
 </mapper>

@@ -26,7 +26,10 @@ public interface ArticleMapper {
     // 댓글 리스트 가져오기
     List<Comment> commetList(int articleId);
 
+    // 댓글 수정 후 반환 타입 생성
     Comment commentUpdate(Comment comment);
+
+    Comment commentUpdateNew(int id);
 
     Comment commentDelete(int id);
 }

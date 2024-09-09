@@ -32,12 +32,16 @@ public class ArticleRestController {
 
     // 댓글 삭제를 요청하는 mapping (method="delete")
     @DeleteMapping()
-    public ResponseEntity<Comment> deleteComment(@PathVariable int id) {
+    // public ResponseEntity<Void> deleteComment(@PathVariable int id) {
+    public ResponseEntity<Comment> deleteComment(@PathVariable int id, Comment comment) {
         log.info("ArticleRestController-deleteComment");
 
-        Comment deleted = service.commentDelete(id);
+//        Comment deleted = service.commentDelete(id);
+        // 삭제한 데이터를 받아서 요청 코드랑 함께 반환할 것인지
+        service.commentDelete(id);
 
-        return deleted != null ? ResponseEntity.status(HttpStatus.NO_CONTENT).build() : ResponseEntity.status(HttpStatus.BAD_REQUEST).build();
+//        return deleted != null ? ResponseEntity.status(HttpStatus.NO_CONTENT).build() : ResponseEntity.status(HttpStatus.BAD_REQUEST).build();
+        return ResponseEntity.status(HttpStatus.NO_CONTENT).build();
     }
 
 }

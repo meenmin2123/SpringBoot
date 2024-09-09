@@ -20,7 +20,7 @@ function commtentUpdate() {
     })
 }
 
-// th:attr 속성이용해서 값들을 변경
+// th:attr 속성 이용해서 값들을 변경
 // src,href @{}
 // img 경로설정을 할때는 @{경로/${파일명}.확장자명}
 // form th:action -> th:attr="@{/articles/save}"

@@ -4,13 +4,11 @@ import com.ss.thymybatis.dto.Article;
 import com.ss.thymybatis.dto.Comment;
 import com.ss.thymybatis.service.ArticleService;
 import lombok.extern.slf4j.Slf4j;
+import org.apache.ibatis.annotations.Delete;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PathVariable;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 
@@ -105,5 +103,24 @@ public class ArticleController {
         service.insertComment(comment);
 
         return "redirect:/articles/" + comment.getArticeId();
+    }
+
+    //
+    @DeleteMapping("/comment/delete/{id}")
+    public String deleteComment(@PathVariable int id) {
+        log.info("ArticleController - deleteComment()");
+
+        // RestController ,Controller
+        // 댓글 삭제시
+        // 1. 컨트롤러로 요청 받음 (id값 가져오기)
+        // 2. 서비스 deleteComment(); 호출
+        // 3. 서비스에서 mapper로 호출
+        // 4. sql문장을 호출해서 실행
+        // 5. 위에 있는 번호들을 반대로 끝내면서
+        // 6. 컨트롤러에 오는것!
+
+        service.deleteComment(id);
+
+        return "redirect:/articles/";
     }
 }

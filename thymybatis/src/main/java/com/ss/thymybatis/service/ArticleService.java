@@ -43,7 +43,17 @@ public class ArticleService {
         return mapper.commentUpdate(comment);
     }
 
+    // 수정된 댓글을 한 건 가져오기
+    public Comment commentUpdateNew(int id) {
+        return mapper.commentUpdateNew(id);
+    }
+
+    // 댓글 삭제
     public Comment commentDelete(int id) {
         return mapper.commentDelete(id);
+    }
+
+    public void deleteComment(int id) {
+        mapper.commentDelete(id);
     }
 }
