@@ -1,0 +1,45 @@
+main {
+    margin-top: 25px;
+}
+
+.searchBox {
+    display: flex;
+    margin-top: 20px;
+    border:1px solid lightgray;
+    border-radius: 10px;
+    padding:20px;
+    justify-content: space-between;
+}
+
+.searchView1 select {
+    margin-right:10px;
+    padding:5px;
+}
+.searchView2 #searchForm {
+    justify-content: end;
+    display: flex;
+}
+
+.searchView2 select {
+    margin-right:10px;
+    padding:5px;
+}
+
+.searchView2 input {
+    margin-right:10px;
+}
+
+.searchView2 .searchInput {
+    width: 200px;
+}
+
+/*btnBox*/
+.btnBox{
+    margin-top: 20px;
+    text-align: right;
+}
+
+/* table */
+section {
+    margin-top: 20px;
+}

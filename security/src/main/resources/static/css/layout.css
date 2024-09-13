@@ -1,0 +1,8 @@
+footer {
+    text-align: center;
+    padding: 5px; /* 패딩 */
+    position: fixed; /* 고정 위치 */
+    left: 0; /* 왼쪽으로 위치 설정 */
+    bottom: 5px; /* 하단에 위치 설정 */
+    width: 100%; /* 화면 폭을 전체로 설정 */
+}
