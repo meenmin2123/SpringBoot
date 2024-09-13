@@ -1,0 +1,19 @@
+<nav aria-label="Page navigation pageNav" th:fragment="pageNav">
+    <ul class="pagination">
+        <!-- 이전 버튼 -->
+        <li class="page-item" th:class="${pageInfo.currentPage == 1 ? 'disabled' : ''}">
+            <a class="page-link" th:href="@{/board/search(searchType=${searchType}, searchValue=${searchValue}, page=${pageInfo.currentPage - 1})}" aria-label="Previous">Previous</a>
+        </li>
+
+        <!-- 페이지 번호 -->
+        <li class="page-item" th:each="page : ${#numbers.sequence(1, pageInfo.totalPage)}"
+            th:classappend="${pageInfo.currentPage == page ? 'active' : ''}">
+            <a class="page-link" th:href="@{/board/search(searchType=${searchType}, searchValue=${searchValue}, page=${page})}" th:text="${page}">1</a>
+        </li>
+
+        <!-- 다음 버튼 -->
+        <li class="page-item" th:class="${pageInfo.currentPage == pageInfo.totalPage ? 'disabled' : ''}">
+            <a class="page-link" th:href="@{/board/search(searchType=${searchType}, searchValue=${searchValue}, page=${pageInfo.currentPage + 1})}" aria-label="Next">Next</a>
+        </li>
+    </ul>
+</nav>

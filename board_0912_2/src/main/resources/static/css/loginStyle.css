@@ -1,0 +1,20 @@
+.loginBtn {
+    width: 300px;
+    margin-top: 35px;
+}
+
+.findLinkBox{
+    align-items: center;
+}
+
+.loginBox .form-control {
+    width: 300px;
+}
+
+section .custom-top {
+    top: 45% !important;
+}
+
+#findPw {
+    margin-left: 15px;
+}

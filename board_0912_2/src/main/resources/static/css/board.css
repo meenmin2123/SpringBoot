@@ -1,0 +1,60 @@
+main {
+    text-align: center;
+}
+
+section .table {
+    text-align: center;
+    margin-top:30px;
+}
+
+.pageTitle {
+    margin-top:20px;
+}
+
+.pageTitle h1 {
+    text-align: center;
+}
+
+.searchView {
+    display: flex;
+    justify-content: center; /* 수평 가운데 정렬 */
+    align-items: center; /* 수직 가운데 정렬 */
+    height: 10vh; /* 전체 높이를 차지하여 수직 가운데 정렬이 효과적으로 이루어짐 */
+    margin-top: 10px;
+}
+
+.searchView .searchBox{
+    text-align: center; /* 텍스트 중심 정렬 */
+    display: flex;
+    margin-top: 15px;
+}
+
+.searchBox .btn {
+    margin-left: 10px;
+}
+
+form .form-control {
+    width: 200px;
+}
+
+.search input {
+    margin-left: 20px;
+    margin-right: 5px;
+}
+
+.findLinkBox {
+    display: flex;
+}
+
+footer {
+    text-align: center;
+    padding: 5px; /* 패딩 */
+    position: fixed; /* 고정 위치 */
+    left: 0; /* 왼쪽으로 위치 설정 */
+    bottom: 5px; /* 하단에 위치 설정 */
+    width: 100%; /* 화면 폭을 전체로 설정 */
+}
+
+.searchView .input-group {
+    margin-top: 20px;
+}

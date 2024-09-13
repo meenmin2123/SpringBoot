@@ -1,7 +1,10 @@
 package com.ss.chatbot.entity;
 
+import lombok.Data;
+
 import javax.persistence.*;
 
+@Data
 @Entity
 public class Student {
 

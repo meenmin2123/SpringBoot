@@ -1,17 +1,26 @@
 package com.ss.chatbot.entity;
 
-import javax.persistence.FetchType;
-import javax.persistence.JoinColumn;
-import javax.persistence.ManyToOne;
+import lombok.Data;
+import javax.persistence.*;
 
+@Data
+@Entity
 public class Comment {
-    private int id;
-    private String content;
-    private String author;
-    private String date;
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    private Long id; // 댓글번호
 
-    @JoinColumn(name="post_id")
-    @ManyToOne(fetch = FetchType.LAZY) // 또는 @OneToOne
-    private Post post;
+    @Column
+    private String nickname;
+
+    @Column
+    private String body;
+
+
+    // 댓글이 속한 게시글과 관계
+    // 다대일
+    @ManyToOne
+    @JoinColumn(name="article_id")
+    private Article article;
 
 }

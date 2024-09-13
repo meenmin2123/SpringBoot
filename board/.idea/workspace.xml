@@ -1,0 +1,141 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="f699db9c-ba07-4dd2-bcc5-da1c22d68748" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/../chatbot/src/main/java/com/ss/chatbot/controller/chatbotController.java" beforeDir="false" afterPath="$PROJECT_DIR$/../chatbot/src/main/java/com/ss/chatbot/controller/chatbotController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../chatbot/src/main/java/com/ss/chatbot/entity/Comment.java" beforeDir="false" afterPath="$PROJECT_DIR$/../chatbot/src/main/java/com/ss/chatbot/entity/Comment.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../chatbot/src/main/java/com/ss/chatbot/entity/Customer.java" beforeDir="false" afterPath="$PROJECT_DIR$/../chatbot/src/main/java/com/ss/chatbot/entity/Customer.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../chatbot/src/main/java/com/ss/chatbot/entity/Order.java" beforeDir="false" afterPath="$PROJECT_DIR$/../chatbot/src/main/java/com/ss/chatbot/entity/Order.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../chatbot/src/main/java/com/ss/chatbot/entity/Passport.java" beforeDir="false" afterPath="$PROJECT_DIR$/../chatbot/src/main/java/com/ss/chatbot/entity/Passport.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../chatbot/src/main/java/com/ss/chatbot/entity/Post.java" beforeDir="false" afterPath="$PROJECT_DIR$/../chatbot/src/main/java/com/ss/chatbot/entity/Post.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../chatbot/src/main/java/com/ss/chatbot/entity/School.java" beforeDir="false" afterPath="$PROJECT_DIR$/../chatbot/src/main/java/com/ss/chatbot/entity/School.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../chatbot/src/main/java/com/ss/chatbot/entity/Student.java" beforeDir="false" afterPath="$PROJECT_DIR$/../chatbot/src/main/java/com/ss/chatbot/entity/Student.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../chatbot/src/main/java/com/ss/chatbot/repository/CustomerRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/../chatbot/src/main/java/com/ss/chatbot/repository/CustomerRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../chatbot/src/main/java/com/ss/chatbot/repository/OrderRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/../chatbot/src/main/java/com/ss/chatbot/repository/OrderRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../chatbot/src/main/java/com/ss/chatbot/repository/SchoolRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/../chatbot/src/main/java/com/ss/chatbot/repository/SchoolRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../chatbot/src/main/java/com/ss/chatbot/repository/StudentRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/../chatbot/src/main/java/com/ss/chatbot/repository/StudentRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../chatbot/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/../chatbot/src/main/resources/application.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../chatbot/src/main/resources/static/css/chatStyle.css" beforeDir="false" afterPath="$PROJECT_DIR$/../chatbot/src/main/resources/static/css/chatStyle.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../chatbot/src/main/resources/static/css/mainStyle.css" beforeDir="false" afterPath="$PROJECT_DIR$/../chatbot/src/main/resources/static/css/mainStyle.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../chatbot/src/main/resources/templates/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/../chatbot/src/main/resources/templates/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../chatbot/src/main/resources/templates/layout/footer.html" beforeDir="false" afterPath="$PROJECT_DIR$/../chatbot/src/main/resources/templates/layout/footer.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../chatbot/src/main/resources/templates/layout/header.html" beforeDir="false" afterPath="$PROJECT_DIR$/../chatbot/src/main/resources/templates/layout/header.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../chatbot/src/main/resources/templates/main/chatting.html" beforeDir="false" afterPath="$PROJECT_DIR$/../chatbot/src/main/resources/templates/main/chatting.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../chatbot/src/main/resources/templates/main/main.html" beforeDir="false" afterPath="$PROJECT_DIR$/../chatbot/src/main/resources/templates/main/main.html" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Interface" />
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
+  </component>
+  <component name="GitHubPullRequestSearchHistory">{
+  &quot;lastFilter&quot;: {
+    &quot;state&quot;: &quot;OPEN&quot;,
+    &quot;assignee&quot;: &quot;meenmin2123&quot;
+  }
+}</component>
+  <component name="GithubPullRequestsUISettings">{
+  &quot;selectedUrlAndAccountId&quot;: {
+    &quot;url&quot;: &quot;https://github.com/meenmin2123/SpringBoot.git&quot;,
+    &quot;accountId&quot;: &quot;31511604-3473-4713-b01e-208498a8587a&quot;
+  }
+}</component>
+  <component name="MavenImportPreferences">
+    <option name="generalSettings">
+      <MavenGeneralSettings>
+        <option name="mavenHomeTypeForPersistence" value="WRAPPER" />
+      </MavenGeneralSettings>
+    </option>
+  </component>
+  <component name="ProblemsViewState">
+    <option name="selectedTabId" value="DEPENDENCY_CHECKER_PROBLEMS_TAB" />
+  </component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 1
+}</component>
+  <component name="ProjectId" id="2ltynM5Jcgh3PF45Y01ZvvryYL1" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RequestMappingsPanelOrder0&quot;: &quot;0&quot;,
+    &quot;RequestMappingsPanelOrder1&quot;: &quot;1&quot;,
+    &quot;RequestMappingsPanelWidth0&quot;: &quot;75&quot;,
+    &quot;RequestMappingsPanelWidth1&quot;: &quot;75&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;Spring Boot.BoardApplication.executor&quot;: &quot;Run&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;master&quot;,
+    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/fullstack/part6/Spring Boot/SpringBoot/board/src/main/resources/templates/aop&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;Modules&quot;,
+    &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
+    &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  }
+}</component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\fullstack\part6\Spring Boot\SpringBoot\board\src\main\resources\templates\aop" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\fullstack\part6\Spring Boot\SpringBoot\board\src\main\resources" />
+    </key>
+    <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="com.ss.board.entity" />
+    </key>
+  </component>
+  <component name="RunManager">
+    <configuration name="BoardApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
+      <module name="board" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.ss.board.BoardApplication" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+  </component>
+  <component name="SharedIndexes">
+    <attachedChunks>
+      <set>
+        <option value="bundled-jdk-9823dce3aa75-b114ca120d71-intellij.indexing.shared.core-IU-242.20224.419" />
+        <option value="bundled-js-predefined-d6986cc7102b-410509235cf1-JavaScript-IU-242.20224.419" />
+      </set>
+    </attachedChunks>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="f699db9c-ba07-4dd2-bcc5-da1c22d68748" name="Changes" comment="" />
+      <created>1726013832731</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1726013832731</updated>
+      <workItem from="1726013833793" duration="27498000" />
+      <workItem from="1726100119873" duration="1185000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+</project>

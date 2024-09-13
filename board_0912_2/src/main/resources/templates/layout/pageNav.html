@@ -1,0 +1,32 @@
+<nav aria-label="Page navigation pageNav" th:fragment="pageNav">
+    <ul class="pagination">
+        <!-- 이전 버튼 -->
+        <li class="page-item" th:class="${page.first} ? 'page-item disabled' : 'page-item'">
+            <a class="page-link" th:href="@{${#httpServletRequest.requestURI}(page=0)}" aria-label="Previous">
+                <span aria-hidden="true">&laquo;</span>
+            </a>
+        </li>
+
+        <!-- 페이지 번호 -->
+        <li class="page-item" th:each="i : ${#numbers.sequence(0, page.totalPages - 1)}"
+            th:class="${page.number == i} ? 'active' : ''">
+            <a class="page-link" th:href="@{/board/search(page=${i}, searchOption=${searchOption}, keyword=${keyword})}"
+               th:text="${i + 1}">Page</a>
+        </li>
+
+        <!-- 다음 버튼 -->
+        <li class="page-item" th:class="${page.last} ? 'page-item disabled' : 'page-item'">
+            <a class="page-link" th:href="@{${#httpServletRequest.requestURI}(page=${page.totalPages -1})}" aria-label="Next">
+                <span aria-hidden="true">&raquo;</span>
+            </a>
+        </li>
+    </ul>
+</nav>
+
+<!--
+    * httpServletRequest.requestURI
+    : 타임리프에서 제공하는 유틸리티 객체
+    - httpServletRequest : 현재 요청의 URI를 가져옴. 현재 페이지의 URL을 얻는 역할
+    - URL에 쿼리?page=번호
+    현재 페이지 번호는 i가 가지고 있음.
+-->
