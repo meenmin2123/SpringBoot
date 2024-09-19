@@ -1,0 +1,10 @@
+INSERT INTO Book (title, author) VALUES ('The Great Gatsby', 'F. Scott Fitzgerald');
+INSERT INTO Book (title, author) VALUES ('1984', 'George Orwell');
+INSERT INTO Book (title, author) VALUES ('To Kill a Mockingbird', 'Harper Lee');
+INSERT INTO Book (title, author) VALUES ('The Catcher in the Rye', 'J.D. Salinger');
+INSERT INTO Book (title, author) VALUES ('Moby-Dick', 'Herman Melville');
+INSERT INTO Book (title, author) VALUES ('Pride and Prejudice', 'Jane Austen');
+INSERT INTO Book (title, author) VALUES ('The Lord of the Rings', 'J.R.R. Tolkien');
+INSERT INTO Book (title, author) VALUES ('War and Peace', 'Leo Tolstoy');
+INSERT INTO Book (title, author) VALUES ('The Hobbit', 'J.R.R. Tolkien');
+INSERT INTO Book (title, author) VALUES ('The Alchemist', 'Paulo Coelho');
