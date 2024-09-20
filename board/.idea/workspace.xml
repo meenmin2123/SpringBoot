@@ -5,26 +5,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="f699db9c-ba07-4dd2-bcc5-da1c22d68748" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/../chatbot/src/main/java/com/ss/chatbot/controller/chatbotController.java" beforeDir="false" afterPath="$PROJECT_DIR$/../chatbot/src/main/java/com/ss/chatbot/controller/chatbotController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../chatbot/src/main/java/com/ss/chatbot/entity/Comment.java" beforeDir="false" afterPath="$PROJECT_DIR$/../chatbot/src/main/java/com/ss/chatbot/entity/Comment.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../chatbot/src/main/java/com/ss/chatbot/entity/Customer.java" beforeDir="false" afterPath="$PROJECT_DIR$/../chatbot/src/main/java/com/ss/chatbot/entity/Customer.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../chatbot/src/main/java/com/ss/chatbot/entity/Order.java" beforeDir="false" afterPath="$PROJECT_DIR$/../chatbot/src/main/java/com/ss/chatbot/entity/Order.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../chatbot/src/main/java/com/ss/chatbot/entity/Passport.java" beforeDir="false" afterPath="$PROJECT_DIR$/../chatbot/src/main/java/com/ss/chatbot/entity/Passport.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../chatbot/src/main/java/com/ss/chatbot/entity/Post.java" beforeDir="false" afterPath="$PROJECT_DIR$/../chatbot/src/main/java/com/ss/chatbot/entity/Post.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../chatbot/src/main/java/com/ss/chatbot/entity/School.java" beforeDir="false" afterPath="$PROJECT_DIR$/../chatbot/src/main/java/com/ss/chatbot/entity/School.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../chatbot/src/main/java/com/ss/chatbot/entity/Student.java" beforeDir="false" afterPath="$PROJECT_DIR$/../chatbot/src/main/java/com/ss/chatbot/entity/Student.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../chatbot/src/main/java/com/ss/chatbot/repository/CustomerRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/../chatbot/src/main/java/com/ss/chatbot/repository/CustomerRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../chatbot/src/main/java/com/ss/chatbot/repository/OrderRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/../chatbot/src/main/java/com/ss/chatbot/repository/OrderRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../chatbot/src/main/java/com/ss/chatbot/repository/SchoolRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/../chatbot/src/main/java/com/ss/chatbot/repository/SchoolRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../chatbot/src/main/java/com/ss/chatbot/repository/StudentRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/../chatbot/src/main/java/com/ss/chatbot/repository/StudentRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../chatbot/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/../chatbot/src/main/resources/application.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../chatbot/src/main/resources/static/css/chatStyle.css" beforeDir="false" afterPath="$PROJECT_DIR$/../chatbot/src/main/resources/static/css/chatStyle.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../chatbot/src/main/resources/static/css/mainStyle.css" beforeDir="false" afterPath="$PROJECT_DIR$/../chatbot/src/main/resources/static/css/mainStyle.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../chatbot/src/main/resources/templates/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/../chatbot/src/main/resources/templates/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../chatbot/src/main/resources/templates/layout/footer.html" beforeDir="false" afterPath="$PROJECT_DIR$/../chatbot/src/main/resources/templates/layout/footer.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../chatbot/src/main/resources/templates/layout/header.html" beforeDir="false" afterPath="$PROJECT_DIR$/../chatbot/src/main/resources/templates/layout/header.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../chatbot/src/main/resources/templates/main/chatting.html" beforeDir="false" afterPath="$PROJECT_DIR$/../chatbot/src/main/resources/templates/main/chatting.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../chatbot/src/main/resources/templates/main/main.html" beforeDir="false" afterPath="$PROJECT_DIR$/../chatbot/src/main/resources/templates/main/main.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../security/src/main/java/com/ss/security/entity/Admin.java" beforeDir="false" afterPath="$PROJECT_DIR$/../security/src/main/java/com/ss/security/entity/Admins.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../security/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/../security/src/main/resources/application.properties" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -48,12 +30,12 @@
     &quot;assignee&quot;: &quot;meenmin2123&quot;
   }
 }</component>
-  <component name="GithubPullRequestsUISettings">{
-  &quot;selectedUrlAndAccountId&quot;: {
-    &quot;url&quot;: &quot;https://github.com/meenmin2123/SpringBoot.git&quot;,
-    &quot;accountId&quot;: &quot;31511604-3473-4713-b01e-208498a8587a&quot;
+  <component name="GithubPullRequestsUISettings"><![CDATA[{
+  "selectedUrlAndAccountId": {
+    "url": "https://github.com/meenmin2123/SpringBoot.git",
+    "accountId": "46b49686-bcf6-4a6a-938b-3e96b4d35a44"
   }
-}</component>
+}]]></component>
   <component name="MavenImportPreferences">
     <option name="generalSettings">
       <MavenGeneralSettings>
@@ -72,28 +54,29 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;RequestMappingsPanelOrder0&quot;: &quot;0&quot;,
-    &quot;RequestMappingsPanelOrder1&quot;: &quot;1&quot;,
-    &quot;RequestMappingsPanelWidth0&quot;: &quot;75&quot;,
-    &quot;RequestMappingsPanelWidth1&quot;: &quot;75&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;Spring Boot.BoardApplication.executor&quot;: &quot;Run&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;master&quot;,
-    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
-    &quot;last_opened_file_path&quot;: &quot;C:/fullstack/part6/Spring Boot/SpringBoot/board/src/main/resources/templates/aop&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;project.structure.last.edited&quot;: &quot;Modules&quot;,
-    &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
-    &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RequestMappingsPanelOrder0": "0",
+    "RequestMappingsPanelOrder1": "1",
+    "RequestMappingsPanelWidth0": "75",
+    "RequestMappingsPanelWidth1": "75",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "Spring Boot.BoardApplication.executor": "Run",
+    "git-widget-placeholder": "master",
+    "ignore.virus.scanning.warn.message": "true",
+    "kotlin-language-version-configured": "true",
+    "last_opened_file_path": "C:/fullstack/part6/Spring Boot/SpringBoot/board/src/main/resources/templates/aop",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "project.structure.last.edited": "Modules",
+    "project.structure.proportion": "0.15",
+    "project.structure.side.proportion": "0.2",
+    "vue.rearranger.settings.migration": "true"
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\fullstack\part6\Spring Boot\SpringBoot\board\src\main\resources\templates\aop" />
@@ -132,6 +115,7 @@
       <updated>1726013832731</updated>
       <workItem from="1726013833793" duration="27498000" />
       <workItem from="1726100119873" duration="1185000" />
+      <workItem from="1726241136249" duration="46000" />
     </task>
     <servers />
   </component>

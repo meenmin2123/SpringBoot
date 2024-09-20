@@ -62,7 +62,7 @@ public class IndexController {
         return "main/managerPage";
     }
 
-    @GetMapping("/main/login")
+    @GetMapping("/login.do")
     public String login() {
         log.info("IndexController-login()");
 

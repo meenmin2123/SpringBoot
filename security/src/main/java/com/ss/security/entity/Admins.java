@@ -11,7 +11,7 @@ import java.sql.Timestamp;
 
 @Data
 @Entity
-public class Admin {
+public class Admins {
 
     @Id
     @GeneratedValue(strategy = GenerationType.SEQUENCE)
