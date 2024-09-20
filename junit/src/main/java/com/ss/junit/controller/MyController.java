@@ -24,7 +24,7 @@ public class MyController {
     }
 
     @PutMapping("/update/{id}")
-    public ResponseEntity<String> update(@PathVariable Integer id) {
+    public ResponseEntity<String> update(@PathVariable Long id) {
         log.info("MyController - update() 실행");
 
         return ResponseEntity.ok("update!");

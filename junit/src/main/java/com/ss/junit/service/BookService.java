@@ -4,6 +4,7 @@ import com.ss.junit.entity.Book;
 import com.ss.junit.repository.BookRepository;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Transactional;
 
 import java.util.List;
 
@@ -11,36 +12,39 @@ import java.util.List;
 @Service
 public class BookService {
 
+    private final BookRepository bookRepository;
+
+    @Transactional
+    public Book save(Book book) {
+        return bookRepository.save(book);
+    }
+
+    // readOnly : 실제 읽기만 할 때는 특별히 어떤 작업이 일어나지 않음.
+    // - 데이터 변경, 수정, 삭제 롤백이나 커밋 작업이 필요없음.
+    @Transactional(readOnly = true)
+    public List<Book> findAll() {
+        return bookRepository.findAll();
+    }
+
+    public Object findById(Long id) {
+        return bookRepository.findById(id);
+    }
+
+    public Object update(Long id, Book updatedBook) {
+        return bookRepository.update(id, updatedBook);
+    }
+
+    public String delete(Long id) {
+        bookRepository.deleteById(id);
+        return "success";
+    }
+
+
     // 생성자를 이용해서 주입받는 방법
 //    @Autowired
 //    public BookService(BookRepository book) {
 //        this.bookRepository = book;
 //    };
 
-    private final BookRepository bookRepository;
-
-//    public Book bookSave(Book book) {
-//        return bookRepository.save(book);
-//    }
-
-    // 전체 조회
-    public List<Book> findAll() {
-        return bookRepository.findAll();
-    }
-
-    // 한건 조회
-    public Book findById(Long id) {
-        return bookRepository.findById(id).orElse(null);
-    }
-
-    // 수정하기
-    public void update(Long id, Book updatedBook) {
-        bookRepository.save(updatedBook);
-    }
-
-    // 삭제
-    public void delete(Long id) {
-        bookRepository.deleteById(id);
-    }
 
 }

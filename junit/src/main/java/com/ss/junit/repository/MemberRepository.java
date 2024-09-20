@@ -6,12 +6,9 @@ import org.springframework.stereotype.Repository;
 
 import java.util.List;
 
-
-@Repository
 public interface MemberRepository extends JpaRepository<Member, Long> {
 
     void deleteById(Long id);
     List<Member> findAll();
-
     List<Member> findByName(String name);
 }

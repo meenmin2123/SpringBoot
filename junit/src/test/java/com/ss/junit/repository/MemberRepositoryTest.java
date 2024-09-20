@@ -60,7 +60,7 @@ public class MemberRepositoryTest {
         members.forEach(System.out::println);       // 람다식으로 리스트나 컬렉션 데이터들을 하나씩 출력하는 방식
 
         // 이름으로 조회했을 때
-        List<Member> list = repository.findByName("IU");
+//        List<Member> list = repository.findByName("IU");
 
     }
 
