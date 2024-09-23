@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react'
-import BookItem from './BookItem';
+import BookItem from '../../components/BookItem';
 import '../../components/header.css';
 
 const Home = () => {

@@ -11,10 +11,13 @@ const SaveForm = () => {
     // 기본 동작을 막음
     event.preventDefault();
 
+    console.log('제목:',title);
+    console.log('저자:',author);
+
     // 입력받은 데이터를 개체로 생성
     const book = {
-      title: title.trim(),
-      author: author.trim()
+      title: title,
+      author: author
     };
 
     try {
@@ -49,13 +52,13 @@ const SaveForm = () => {
         <Form.Group className="mb-3" controlId="formTitle">
           <Form.Label>제목</Form.Label>
           <Form.Control type="text" placeholder="책 제목을 입력하세요"
-            onChange={(e) => { setTitle(e.target.value) }} />
+            value={title} onChange={(e) => { setTitle(e.target.value) }} />
         </Form.Group>
 
         <Form.Group className="mb-3" controlId="formBasicPassword">
           <Form.Label>저자</Form.Label>
           <Form.Control type="text" placeholder="저자를 입력하세요"
-            onChange={(e) => { setAuthor(e.target.value) }} />
+            value={author} onChange={(e) => { setAuthor(e.target.value) }} />
         </Form.Group>
         <Button variant="primary" type="submit">
           Submit
