@@ -11,6 +11,10 @@
     width: 300px;
 }
 
+.container section {
+    text-align: center;
+}
+
 section .custom-top {
     top: 45% !important;
 }

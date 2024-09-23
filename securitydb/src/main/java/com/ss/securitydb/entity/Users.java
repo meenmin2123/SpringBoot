@@ -12,7 +12,8 @@ import java.util.List;
 @Entity
 @AllArgsConstructor
 @Data
-@NoArgsConstructor(access = AccessLevel.PROTECTED)
+@NoArgsConstructor
+//@NoArgsConstructor(access = AccessLevel.PROTECTED)
 public class Users {
 
     @Id
@@ -31,13 +32,13 @@ public class Users {
     @JoinColumn(name = "username", referencedColumnName = "username")
     private List<Role> roles;
 
-    @Column(nullable = false, unique = true, length = 30)
+    @Column(nullable = false, unique = true, length = 50)
     private String email;
 
-    @Column(nullable = false)
-    private String phoneNum;
-
-    private String imgUrl;
-    private LocalDate createdAt;
+//    @Column(nullable = false)
+//    private String phoneNum;
+//
+//    private String imgUrl;
+//    private LocalDate createdAt;
 
 }

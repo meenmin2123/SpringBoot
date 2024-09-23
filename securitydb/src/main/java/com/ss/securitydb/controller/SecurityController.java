@@ -4,12 +4,10 @@ import com.ss.securitydb.entity.Users;
 import com.ss.securitydb.service.UserService;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestParam;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 @Controller
 @Slf4j
@@ -17,6 +15,8 @@ public class SecurityController {
 
     @Autowired
     private UserService userService;
+    @Autowired
+    private BCryptPasswordEncoder passwordEncoder;
 
     @GetMapping("/security")
     public String securityMain() {
@@ -56,12 +56,37 @@ public class SecurityController {
     }
 
     @GetMapping("/login")
-    public String loginPage() {
+    public String loginPage(Model model) {
+        log.info("SecurityController - loginPage()");
+        model.addAttribute("users", new Users());
         return "security/login"; // 로그인 페이지로 이동
     }
 
     @PostMapping("/loginPro")
-    public String loginPagePro() {
+    public String loginPagePro(@ModelAttribute Users users, Model model) {
+        log.info("SecurityController - loginPagePro()");
+
+        Users retrievedUser = userService.findByEmail(users.getEmail());
+        System.out.println("사용자 : " + retrievedUser);
+
+
+        if (retrievedUser != null) {
+
+            if (passwordEncoder.matches(users.getPassword(), retrievedUser.getPassword())) {
+                String redirectUrl = null;
+
+                if (retrievedUser.getRoles().stream().anyMatch(role -> role.getRoleName().equals("ROLE_ADMIN"))) {
+                    redirectUrl = "redirect:/security/admin";
+                } else {
+                    redirectUrl = "redirect:/security/user";
+                }
+                model.addAttribute("users", retrievedUser);
+                return redirectUrl;
+            }
+        }
+        // 인증 실패
+        model.addAttribute("error", "Invalid username or password");
         return "security/login";
     }
+
 }

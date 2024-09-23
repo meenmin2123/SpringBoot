@@ -4,6 +4,7 @@ import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.security.config.annotation.web.builders.HttpSecurity;
 import org.springframework.security.core.Authentication;
+import org.springframework.security.core.authority.SimpleGrantedAuthority;
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.security.web.SecurityFilterChain;
 import org.springframework.security.web.authentication.AuthenticationSuccessHandler;
@@ -29,6 +30,7 @@ public class SecurityConfig {
                    .antMatchers("/security/user").hasAnyRole("USER", "ADMIN")   // user 페이지는 user, admin 둘 다 접근 가능.
                    .antMatchers("/login","/security","/join").permitAll()        // 특정 url은 누구나 접근 가능
                    .antMatchers("/h2-console/**").permitAll()
+                   .antMatchers("/css/**").permitAll()
                    .anyRequest().authenticated()
                    .and()
                    .formLogin().loginPage("/login")    // 로그인 페이지 경로 설정
@@ -51,6 +53,10 @@ public class SecurityConfig {
         return new AuthenticationSuccessHandler() {
             // 요청이 성공적으로 인증되었을 때 실행되는 코드
 
+            // 사용자 권한을 확인하여 역할에 따라 리다이렉트
+
+
+
             @Override
             public void onAuthenticationSuccess(HttpServletRequest request, HttpServletResponse response, Authentication authentication) throws IOException, ServletException {
                 // 사용자 권한을 확인하여 역할에 따라 리다이렉트
@@ -63,6 +69,12 @@ public class SecurityConfig {
                     redirectUrl = "/security/user";
                 }
                 response.sendRedirect(redirectUrl);
+
+//                if (authentication.getAuthorities().contains(new SimpleGrantedAuthority("ROLE_ADMIN"))) {
+//                    response.sendRedirect("/security/admin");
+//                } else {
+//                    response.sendRedirect("/security/user");
+//                }
             }
         };
     }

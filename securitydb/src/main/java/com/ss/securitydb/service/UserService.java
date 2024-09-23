@@ -82,6 +82,14 @@ public class UserService {
         // 권한을 없을 경우, false 반환
         return result;
     }
+
+    public Users findById(Long id) {
+        return userRepository.findById(id);
+    }
+
+    public Users findByEmail(String email) {
+        return userRepository.findByEmail(email);
+    }
 }
 
 /*
