@@ -1,6 +1,6 @@
 import React from 'react';
 import styles from './LoginForm.module.css';
-
+import '../../components/header.css';
 
 const LoginForm = () => {
 

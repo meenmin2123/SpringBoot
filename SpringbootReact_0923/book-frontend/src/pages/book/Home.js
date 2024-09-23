@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react'
 import BookItem from './BookItem';
+import '../../components/header.css';
 
 const Home = () => {
     
