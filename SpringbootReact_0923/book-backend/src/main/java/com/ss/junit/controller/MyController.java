@@ -16,19 +16,19 @@ public class MyController {
     }
 
     // ResponseEntity<?>
-    @PostMapping("/create")
-    public ResponseEntity<String> create() {
-        log.info("MyController - create() 실행");
-
-        return ResponseEntity.ok("created");
-    }
-
-    @PutMapping("/update/{id}")
-    public ResponseEntity<String> update(@PathVariable Long id) {
-        log.info("MyController - update() 실행");
-
-        return ResponseEntity.ok("update!");
-    }
+//    @PostMapping("/create")
+//    public ResponseEntity<String> create() {
+//        log.info("MyController - create() 실행");
+//
+//        return ResponseEntity.ok("created");
+//    }
+//
+//    @PutMapping("/update/{id}")
+//    public ResponseEntity<String> update(@PathVariable Long id) {
+//        log.info("MyController - update() 실행");
+//
+//        return ResponseEntity.ok("update!");
+//    }
 }
 
 // MockMVC : 웹 컨트롤러의 서버를 실행하지 않고 테스트할 수 있도록 도와주는 라이브러리

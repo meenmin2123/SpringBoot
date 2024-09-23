@@ -19,6 +19,9 @@ public class Member {
     private Long id;
 
     @NonNull
+    private String password;
+
+    @NonNull
     private String name;
 
     @NonNull

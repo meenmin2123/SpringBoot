@@ -12,6 +12,8 @@ import lombok.RequiredArgsConstructor;
 
 import java.util.List;
 
+// BookController 외부에서 오는 모든 js 모든 요청을 받음.
+@CrossOrigin
 @RestController
 @Slf4j
 @RequiredArgsConstructor
@@ -19,12 +21,15 @@ public class BookController {
 
     private final BookService bookService;
 
-//    @GetMapping("/book")
-//    public String bookMain() {
-//        List<Book> booklists = bookService.findAll();
-//        System.out.println("booklists : " + booklists.toString());
-//        return "success-bookMain()";
-//    }
+    @GetMapping("/book")
+    public ResponseEntity<?> bookMain() {
+        List<Book> booklists = bookService.findAll();
+        System.out.println("booklists : " + booklists.toString());
+        return new ResponseEntity<>(bookService.findAll(), HttpStatus.OK);
+    }
+
+    // CORS 외부에서 자바스크립트 요청이 들어오는 것을 막음.
+    // @CrossOrigin : 막는 것을 풀어주는 어노테이션
 
     @PostMapping("/book")
     public ResponseEntity<?> saveBook(@RequestBody Book book) {
@@ -33,11 +38,12 @@ public class BookController {
         return new ResponseEntity<Book>(bookService.save(book), HttpStatus.CREATED);
     }
 
-    @GetMapping("/findAll")
-    public ResponseEntity<?> findAllBook() {
-        log.info("BookController-selectBook()");
-        return new ResponseEntity<>(bookService.findAll(), HttpStatus.OK);
-    }
+//    @CrossOrigin
+//    @GetMapping("/findAll")
+//    public ResponseEntity<?> findAllBook() {
+//        log.info("BookController-selectBook()");
+//        return new ResponseEntity<>(bookService.findAll(), HttpStatus.OK);
+//    }
 
     @GetMapping("/book/{id}")
     public ResponseEntity<?> getBookById(@PathVariable Long id) {
