@@ -26,18 +26,32 @@ public class BookService {
         return bookRepository.findAll();
     }
 
-    public Object findById(Long id) {
-        return bookRepository.findById(id);
+    @Transactional(readOnly = true)
+    public Book findById(Long id) {
+        return bookRepository.findById(id).orElseThrow(() ->
+                new IllegalArgumentException(id + "를 찾을 수 없음."));
     }
 
-    public Object update(Long id, Book updatedBook) {
-//        return bookRepository.update(id, updatedBook);
-        return null;
+    @Transactional
+    public Book update(Long id, Book updatedBook) {
+        Book existingBook = bookRepository.findById(id).orElseThrow(() ->
+                new IllegalArgumentException(id + "를 찾을 수 없음."));
+        System.out.println("existingBook : " + existingBook);
+
+        existingBook.setTitle(updatedBook.getTitle());
+        existingBook.setAuthor(updatedBook.getAuthor());
+
+        return bookRepository.save(existingBook);
     }
 
-    public String delete(Long id) {
-        bookRepository.deleteById(id);
-        return "success";
+    @Transactional
+    public boolean delete(Long id) {
+        if(bookRepository.existsById(id)) {
+            bookRepository.deleteById(id);
+            return true;
+        } else {
+            return false;
+        }
     }
 
 

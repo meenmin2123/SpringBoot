@@ -12,6 +12,8 @@ import lombok.RequiredArgsConstructor;
 
 import java.util.List;
 
+// CORS 외부에서 자바스크립트 요청이 들어오는 것을 막음.
+// @CrossOrigin : 막는 것을 풀어주는 어노테이션
 // BookController 외부에서 오는 모든 js 모든 요청을 받음.
 @CrossOrigin
 @RestController
@@ -28,9 +30,6 @@ public class BookController {
         return new ResponseEntity<>(bookService.findAll(), HttpStatus.OK);
     }
 
-    // CORS 외부에서 자바스크립트 요청이 들어오는 것을 막음.
-    // @CrossOrigin : 막는 것을 풀어주는 어노테이션
-
     @PostMapping("/book")
     public ResponseEntity<?> saveBook(@RequestBody Book book) {
         log.info("BookController-saveBook()");
@@ -38,16 +37,8 @@ public class BookController {
         return new ResponseEntity<Book>(bookService.save(book), HttpStatus.CREATED);
     }
 
-//    @CrossOrigin
-//    @GetMapping("/findAll")
-//    public ResponseEntity<?> findAllBook() {
-//        log.info("BookController-selectBook()");
-//        return new ResponseEntity<>(bookService.findAll(), HttpStatus.OK);
-//    }
-
     @GetMapping("/book/{id}")
     public ResponseEntity<?> getBookById(@PathVariable Long id) {
-        Book book = (Book) bookService.findById(id);
        return new ResponseEntity<>(bookService.findById(id), HttpStatus.OK);
     }
 
@@ -57,8 +48,13 @@ public class BookController {
     }
 
     @DeleteMapping("/book/{id}")
-    public String bookDeleteBy(@PathVariable Long id) {
-        bookService.delete(id);
-        return "success";
+    public ResponseEntity<Void> bookDeleteBy(@PathVariable Long id) {
+        boolean res = bookService.delete(id);
+
+        if(res) {
+            return ResponseEntity.noContent().build();
+        } else {
+            return ResponseEntity.notFound().build();
+        }
     }
 }

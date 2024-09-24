@@ -212,16 +212,22 @@ public class BookControllerMockTest {
         Long id = 1L;
 
         //when(실행)
-        when(bookService.delete(id)).thenReturn("success");
+        when(bookService.delete(id)).thenReturn(true);
 
-        //then(응답검증)
+        //then(응답검증) - 성공적인 삭제 (204 No Content)
         ResultActions resultAction = mockMvc.perform(delete("/book/{id}", id));
 
-        //then(응답 검증)
+        resultAction.andExpect(status().isNoContent()).andDo(print());
+
+        when(bookService.delete(id)).thenReturn(false);
+
+        //BookService를 Mock하여 delete가 실패할 경우 설정
+        resultAction = mockMvc.perform(delete("/book/{id}", id));
+
+        //then(응답 검증) - 삭제할 리소스가 없음 (404 Not Found)
         resultAction.andExpect(status().isOk())
                 .andDo(print());
     }
-
 
     @AfterEach
     public void tearDown() {

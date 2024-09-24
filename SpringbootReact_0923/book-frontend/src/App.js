@@ -7,6 +7,8 @@ import SaveForm from './pages/book/SaveForm';
 import JoinForm from './pages/user/JoinForm';
 import LoginForm from './pages/user/LoginForm';
 import UpdateForm from './pages/book/UpdateForm';
+import Detail from './pages/book/Detail';
+import Delete from './pages/book/Delete';
 import './components/header.css';
 
 function App() {
@@ -31,15 +33,23 @@ function App() {
           <Route path="/saveForm" element={<SaveForm />}/>
 
           {/* url 에서 /book/1, /book/2 */}
-          <Route path="/book/:id" element={<div>글 상세페이지</div>}/>
+          <Route path="/book/:id" element={<Detail />}/>
           <Route path="/loginForm" element={<LoginForm />}/>
           <Route path="/joinForm" element={<JoinForm />}/>
           <Route path="/updateForm/:id" element={<UpdateForm />}/>
+          <Route path="/delete/:id" element={<Delete />}/>
         
         </Routes>
       </Container>
-
     </div>
+
+    // 1. 삭제하는 경로 Rotue
+    // 2. 삭제할 때 컴포넌트 생성
+    // 3. url로  /delete/1 , /delete/2
+    // 4. alert()창으로 결과 출력
+    // 5. 컨트롤러 작성! 서비스작성 후 
+    // 6. 결과응답!
+
   );
 }
 

@@ -10,6 +10,8 @@ const BookItem = ({id,title,author}) => {
             <Card.Title>{title}</Card.Title>
             <p>{author}</p>
             <Link to={`/book/${id}` } variant="primary" className="btn btn-primary">상세보기</Link>
+            <Link to={`/updateForm/${id}` } variant="primary" className="btn btn-primary">수정하기</Link>
+            <Link to={`/delete/${id}` } variant="danger" className="btn btn-danger">삭제하기</Link>
         </Card.Body>
         </Card>
     );

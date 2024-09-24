@@ -1,7 +1,11 @@
 import React, { useState} from 'react'
 import { Form, Button, Container } from 'react-bootstrap';
+import { useNavigate } from 'react-router-dom';
 
 const SaveForm = () => {
+
+  const navigate = useNavigate();
+
   // 입력 값을 저장하는 변수들
   const [title, setTitle] = useState('');
   const [author, setAuthor] = useState('');
@@ -34,6 +38,7 @@ const SaveForm = () => {
         // 폼 초기화
         setTitle('');
         setAuthor('');
+        navigate("/");
       } else {
         alert('저장에 실패했습니다.');
         console.log('Error response:', await response.text()); // 상세 에러 메시지 로그
