@@ -1,7 +1,19 @@
 import React from 'react'
+import PropTypes from 'prop-types'
 
-export default function ProdectDetaillPage() {
+function ProductDetaillPage() {
+
+  const { id } = useParams();  // URL의 :id 부분을 가져옴
+
+
   return (
-    <div>ProdectDetaillPage</div>
-  )
+    <div>
+      <div>ProdectDetaillPage</div>
+      <p>Showing details for product ID: {id}</p>
+    </div>
+  );
 }
+
+
+export default ProductDetaillPage
+

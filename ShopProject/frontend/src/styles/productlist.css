@@ -1,0 +1,39 @@
+/* headpage */
+
+.head {
+    background-color: bisque;
+    width: 100%;
+    height: 130px;
+    margin-top: 25px;
+    align-content: center;
+}
+
+.productpagehead {
+    text-align: center;
+    align-items: center;
+}
+
+.product-list {
+    margin: 0;
+}
+
+ul {
+    display: flex;
+    justify-content: space-around;
+}
+
+li {
+    list-style: none;
+    padding-right: 1rem;
+}
+
+.image {
+    margin-top: 20px;
+    max-width: 100%;  /*부모 요소의 너비에 따라 크기 조절 */
+    height: auto;    /* 비율 유지 */
+}
+  
+a {
+    display: block;
+    margin-top: 10px;
+}
